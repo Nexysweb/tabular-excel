@@ -3,7 +3,7 @@ import xl from "excel4node";
 type Ws = any;
 type Val = any;
 
-const getCell = (
+/*const getCell = (
   ws: Ws,
   i: number,
   j: number,
@@ -94,7 +94,7 @@ const worksheet = (wb: Ws, rows: Val[][], worksheetName: string) => {
   });
 
   return true;
-};
+};*/
 
 /**
  * creates xlsx from rows
@@ -105,6 +105,7 @@ export const toXlsx = async (
   content: Val[][] | { [key: string]: Val[][] },
   worksheetName: string = "Sheet1"
 ) => {
+  return;
   const wb: Ws = new xl.Workbook();
 
   if (!isObjectAndNotArray(content)) {

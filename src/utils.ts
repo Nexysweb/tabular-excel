@@ -21,7 +21,10 @@ export const formatJsArray = (js: any) => {
 export const jsonBeautify = (jsContent: any) =>
   JSON.stringify(jsContent, null, "  ");
 
-export const toExport = (content: string, workbookName = "MyWorkBook") => {
+export const toExport = (
+  content: string,
+  workbookName = "MyWorkBook"
+): void => {
   const jsContent = JSON.parse(content);
 
   toXlsx(jsContent, workbookName).then((x) => {
